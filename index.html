@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Government Scheme Finder - A citizen-first eligibility discovery engine developed by Team Scheme Savers. Discover government schemes tailored to your profile in 60 seconds.">
+  <meta name="theme-color" content="#0a2540">
+  <title>Government Scheme Finder | Team Scheme Savers</title>
+  
+  <!-- Modern Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. Navigation Header
+       ========================================================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      
+      <!-- Brand Logo & Title -->
+      <a href="#home" class="brand-wrapper" aria-label="Government Scheme Finder Home">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <!-- Shield with Checkmark Emblem -->
+            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">
+            Scheme Finder
+            <span class="team-badge">Team Scheme Savers</span>
+          </span>
+          <span class="brand-subtitle">National Hackathon Edition</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#finderSection" class="nav-link">Find Schemes</a></li>
+          <li><a href="#howItWorks" class="nav-link">How It Works</a></li>
+          <li><a href="#faqSection" class="nav-link">FAQ & Guidance</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action CTA -->
+      <div class="nav-actions">
+        <a href="#finderSection" class="btn btn-primary btn-sm" id="navFindBtn">
+          Check Eligibility
+        </a>
+        <button class="mobile-nav-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. Hero Section
+       ========================================================================= -->
+  <section class="hero-section" id="home">
+    <div class="container hero-content">
+      
+      <div class="hackathon-pill">
+        <span>🇮🇳</span>
+        <span>National Hackathon MVP • Built by First-Year B.Tech Students</span>
+      </div>
+
+      <h1 class="hero-title">
+        Discover Government Schemes <br>
+        <span class="highlight-green">Tailored to Your Profile</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Empowering citizens across India to unlock financial support, higher education scholarships, 
+        healthcare benefits, and enterprise loans in under 60 seconds with 100% data privacy.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#finderSection" class="btn btn-primary btn-lg" id="heroFindBtn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </svg>
+          Find My Schemes
+        </a>
+        <button type="button" class="btn btn-outline btn-lg" id="heroBrowseBtn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path>
+            <path d="M6 6h10M6 10h10M6 14h6"></path>
+          </svg>
+          Browse All 12 Schemes
+        </button>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="trust-badges">
+        <div class="trust-item">
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd"/>
+          </svg>
+          <span>No Aadhaar or Bank Passwords Needed</span>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          <span>100% Free & Open Source</span>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"/>
+          </svg>
+          <span>Direct Official .gov.in Portals</span>
+        </div>
+      </div>
+
+      <!-- Key Metrics Row -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-value">12+</div>
+          <div class="metric-label">Demo Schemes</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">₹0</div>
+          <div class="metric-label">No Intermediaries</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">5+</div>
+          <div class="metric-label">Sectors Covered</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">100%</div>
+          <div class="metric-label">Privacy Compliant</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. Preliminary Notice & Privacy Advisory Banner
+       ========================================================================= -->
+  <div class="advisory-banner" role="region" aria-label="Legal Notice and Privacy Advisory">
+    <div class="container advisory-content">
+      <div class="advisory-text">
+        <svg class="advisory-icon" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+        </svg>
+        <span>
+          <strong>Preliminary Guidance Notice:</strong> Scheme matches presented on this platform are for 
+          <strong>DEMO & educational evaluation</strong> only. Criteria are indicative; applicants must always verify final guidelines, 
+          deadlines, and required documentation directly on official government portals (.gov.in / .nic.in).
+        </span>
+      </div>
+      <div class="privacy-badge">
+        <span>🔒 Zero Sensitive Data Collected</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       4. Eligibility Finder Form Section
+       ========================================================================= -->
+  <main class="section" id="finderSection">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">Instant Eligibility Engine</span>
+        <h2 class="section-title">Check Your Scheme Eligibility</h2>
+        <p class="section-desc">
+          Provide five straightforward parameters below. Our client-side algorithm instantly 
+          matches you against active welfare and development initiatives.
+        </p>
+      </div>
+
+      <!-- Main Form Wrapper -->
+      <div class="form-wrapper-card">
+        
+        <!-- Form Header -->
+        <div class="form-card-header">
+          <div class="form-header-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            Citizen Profile Questionnaire
+          </div>
+          <div class="form-header-note">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            All inputs processed locally in browser
+          </div>
+        </div>
+
+        <!-- Preset Personas (Judges / Testing Ease) -->
+        <div class="preset-bar">
+          <span class="preset-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+            Quick-Fill Demo Personas:
+          </span>
+          <div class="preset-buttons" id="presetButtonsContainer">
+            <!-- Buttons injected by script.js -->
+          </div>
+        </div>
+
+        <!-- The Actual Form -->
+        <form id="schemeFinderForm" class="scheme-form" novalidate>
+          <div class="form-grid">
+            
+            <!-- 1. Age Field -->
+            <div class="form-group" id="groupAge">
+              <label for="inputAge" class="form-label">
+                <span>1. Age (in years) <span class="required-star">*</span></span>
+                <span class="form-hint">e.g. 18 to 70</span>
+              </label>
+              <div class="input-wrapper">
+                <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <input 
+                  type="number" 
+                  id="inputAge" 
+                  name="age" 
+                  class="form-control" 
+                  placeholder="Enter your age (e.g., 20)" 
+                  min="1" 
+                  max="120" 
+                  required
+                >
+              </div>
+              <span class="error-message" id="errorAge">Please enter a valid age between 1 and 120.</span>
+            </div>
+
+            <!-- 2. State Field -->
+            <div class="form-group" id="groupState">
+              <label for="selectState" class="form-label">
+                <span>2. State / Union Territory <span class="required-star">*</span></span>
+                <span class="form-hint">Domicile / Residence</span>
+              </label>
+              <div class="input-wrapper">
+                <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <select id="selectState" name="state" class="form-control" required>
+                  <option value="" disabled selected>-- Select your State or UT --</option>
+                  <!-- Populated from schemes.js -->
+                </select>
+              </div>
+              <span class="error-message" id="errorState">Please select your state of residence.</span>
+            </div>
+
+            <!-- 3. Education Field -->
+            <div class="form-group" id="groupEducation">
+              <label for="selectEducation" class="form-label">
+                <span>3. Highest Education Level <span class="required-star">*</span></span>
+                <span class="form-hint">Current or Completed</span>
+              </label>
+              <div class="input-wrapper">
+                <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+                <select id="selectEducation" name="education" class="form-control" required>
+                  <option value="" disabled selected>-- Select Education Level --</option>
+                  <option value="Below 10th">Below 10th Standard / Primary</option>
+                  <option value="10th Pass">10th Standard Pass (SSC / Matric)</option>
+                  <option value="12th Pass">12th Standard Pass (HSC / Intermediate)</option>
+                  <option value="Diploma / Vocational">Diploma / ITI / Vocational Course</option>
+                  <option value="Undergraduate / Degree">Undergraduate / Bachelor's Degree (B.Tech, B.Sc, B.Com, etc.)</option>
+                  <option value="Postgraduate">Postgraduate Degree / Master's / Ph.D.</option>
+                  <option value="Any">Any / No Formal Education</option>
+                </select>
+              </div>
+              <span class="error-message" id="errorEducation">Please select your educational qualification.</span>
+            </div>
+
+            <!-- 4. Occupation Field -->
+            <div class="form-group" id="groupOccupation">
+              <label for="selectOccupation" class="form-label">
+                <span>4. Primary Occupation <span class="required-star">*</span></span>
+                <span class="form-hint">Current vocation</span>
+              </label>
+              <div class="input-wrapper">
+                <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+                <select id="selectOccupation" name="occupation" class="form-control" required>
+                  <option value="" disabled selected>-- Select Current Occupation --</option>
+                  <option value="Student">Student (School / College / University)</option>
+                  <option value="Farmer">Farmer / Agricultural Producer</option>
+                  <option value="Self-Employed / Small Business">Self-Employed / Micro-Entrepreneur / Street Vendor</option>
+                  <option value="Unemployed">Unemployed / Job Seeker</option>
+                  <option value="Daily Wage / Unorganized Worker">Daily Wage / Casual Labor / Gig Worker</option>
+                  <option value="Salaried / Working Professional">Salaried Employee (Private / Public)</option>
+                  <option value="Any">Homemaker / Other</option>
+                </select>
+              </div>
+              <span class="error-message" id="errorOccupation">Please select your primary occupation.</span>
+            </div>
+
+            <!-- 5. Annual Family Income Field -->
+            <div class="form-group full-width" id="groupIncome">
+              <label for="inputIncome" class="form-label">
+                <span>5. Annual Family Income (in INR ₹) <span class="required-star">*</span></span>
+                <span class="form-hint">Total combined income from all household sources</span>
+              </label>
+              <div class="input-wrapper">
+                <span class="input-icon" style="font-weight: 700; font-size: 1.1rem; line-height: 1;">₹</span>
+                <input 
+                  type="number" 
+                  id="inputIncome" 
+                  name="income" 
+                  class="form-control" 
+                  placeholder="e.g. 250000" 
+                  min="0" 
+                  max="10000000" 
+                  step="5000"
+                  required
+                >
+              </div>
+              
+              <!-- Quick Select Income Chips -->
+              <div class="quick-chips-wrapper">
+                <span class="chip-label">Quick options:</span>
+                <button type="button" class="income-chip" data-income="100000">₹1.0 Lakh</button>
+                <button type="button" class="income-chip" data-income="250000">₹2.5 Lakh</button>
+                <button type="button" class="income-chip" data-income="450000">₹4.5 Lakh</button>
+                <button type="button" class="income-chip" data-income="800000">₹8.0 Lakh</button>
+                <button type="button" class="income-chip" data-income="1200000">₹12.0 Lakh</button>
+              </div>
+              <span class="error-message" id="errorIncome">Please enter your approximate annual family income (0 or above).</span>
+            </div>
+
+          </div>
+
+          <!-- Privacy Safeguard Guarantee -->
+          <div class="privacy-notice-box">
+            <svg class="privacy-notice-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <div>
+              <strong>Privacy Protection Guarantee:</strong>
+              This application strictly <em>does not ask for</em>, collect, or store sensitive credentials 
+              such as Aadhaar numbers, PAN cards, OTPs, bank passwords, or debit/credit card details. 
+              The matching executes purely inside your local browser.
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="form-actions">
+            <button type="button" class="btn btn-outline" id="btnResetForm">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                <path d="M3 3v5h5"></path>
+              </svg>
+              Reset Form
+            </button>
+            <button type="submit" class="btn btn-primary btn-lg" id="btnSubmitForm">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </svg>
+              Find Eligible Schemes
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       5. Results Section
+       ========================================================================= -->
+  <section class="results-section" id="resultsSection" style="display: none;">
+    <div class="container">
+      
+      <!-- Results Controls / Summary Header -->
+      <div class="results-top-bar">
+        
+        <div class="results-summary-row">
+          <div class="results-count-title">
+            <span>Matching Schemes</span>
+            <span class="count-bubble" id="resultsCountBadge">0</span>
+          </div>
+          <div class="profile-tag-pill" id="profileSummaryTag">
+            <!-- Populated dynamically with current user profile -->
+          </div>
+        </div>
+
+        <!-- Filter & Search Toolbar -->
+        <div class="filter-search-row">
+          
+          <!-- Category Chips -->
+          <div class="category-filters" id="categoryFiltersContainer">
+            <button type="button" class="filter-chip active" data-category="All">All Categories</button>
+            <button type="button" class="filter-chip" data-category="Education">Education</button>
+            <button type="button" class="filter-chip" data-category="Agriculture">Agriculture</button>
+            <button type="button" class="filter-chip" data-category="Healthcare">Healthcare</button>
+            <button type="button" class="filter-chip" data-category="Business & Entrepreneurship">Business</button>
+            <button type="button" class="filter-chip" data-category="Skill Development">Skills</button>
+            <button type="button" class="filter-chip" data-category="Housing & Social Welfare">Welfare</button>
+          </div>
+
+          <!-- Quick Search Filter -->
+          <div class="search-box-wrapper">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.3-4.3"></path>
+            </svg>
+            <input 
+              type="text" 
+              id="schemeSearchInput" 
+              class="search-input" 
+              placeholder="Filter by keyword (e.g. loan, scholarship)..."
+            >
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Schemes Cards Grid -->
+      <div class="schemes-grid" id="schemesGrid">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. How It Works Section
+       ========================================================================= -->
+  <section class="how-it-works-section" id="howItWorks">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">Simplified Process</span>
+        <h2 class="section-title">How Government Scheme Finder Works</h2>
+        <p class="section-desc">
+          We eliminate bureaucratic friction by transforming lengthy eligibility criteria into a 3-step intuitive digital experience.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        
+        <div class="step-card">
+          <div class="step-number-bubble">1</div>
+          <h3 class="step-card-title">Share Basic Profile</h3>
+          <p class="step-card-desc">
+            Provide 5 public parameters (age, domicile state, education, vocation, income). 
+            No sensitive data or personal identification numbers are requested.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number-bubble">2</div>
+          <h3 class="step-card-title">Instant Rule Matching</h3>
+          <p class="step-card-desc">
+            Our multi-parameter engine checks central and state ministry rules instantly in your browser, 
+            filtering out irrelevant or non-qualifying welfare schemes.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number-bubble">3</div>
+          <h3 class="step-card-title">Apply on Official Portals</h3>
+          <p class="step-card-desc">
+            Review detailed documents, benefits, and step-by-step guides. Click through to apply directly on 
+            verified official .gov.in and .nic.in portals with zero middleman fees.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. FAQ & Verification Guidance Section
+       ========================================================================= -->
+  <section class="faq-section" id="faqSection">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">Citizen Advisory</span>
+        <h2 class="section-title">Frequently Asked Questions & Guidance</h2>
+        <p class="section-desc">
+          Essential facts about scheme eligibility, safe government portals, and platform operations.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>Why are these schemes labeled as "DEMO DATA"?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            This website is a national hackathon MVP developed by Team "Scheme Savers". 
+            While all listed scheme names, benefits, and portal links are authentic and reference real government 
+            initiatives, the data is tagged as DEMO DATA to remind evaluators and users that matching algorithms 
+            provide preliminary indications rather than legal eligibility guarantees.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>How do I distinguish official government portals from fraudulent websites?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Always inspect the website URL in your browser's address bar. Authentic Central and State 
+            Government websites in India end strictly with <strong>.gov.in</strong> or <strong>.nic.in</strong> 
+            (such as scholarships.gov.in, pmkisan.gov.in). Never pay any agent or third-party for government application forms.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>Is any of my personal information saved on servers?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            No. The entire Government Scheme Finder MVP runs strictly on the client-side using vanilla HTML, 
+            CSS, and JavaScript. No database or remote tracking API is involved. When you refresh or close the tab, 
+            your inputs are discarded immediately.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>What documents should I prepare before applying on official portals?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Standard documentation includes a government photo ID (Voter ID, Driving License, or College ID), 
+            an active bank account linked with Aadhaar/DBT, income certificate from the local revenue authority, 
+            and recent marksheets or trade certificates depending on the specific scheme.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. Footer
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top">
+        
+        <div class="footer-brand">
+          <div class="footer-title">Government Scheme Finder</div>
+          <p class="footer-desc">
+            A citizen-empowering MVP developed for the National Hackathon by 
+            <strong>Team Scheme Savers</strong> (1st Year B.Tech Students). 
+            Committed to transparent governance and digital accessibility.
+          </p>
+          <div class="privacy-badge" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); color: #e2e8f0;">
+            <span>🛡️ Privacy First Architecture • Zero Data Retention</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#finderSection">Check Eligibility</a></li>
+            <li><a href="#howItWorks">How It Works</a></li>
+            <li><a href="#faqSection">FAQ & Guidance</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Official Portals</div>
+          <ul class="footer-links">
+            <li><a href="https://www.india.gov.in/" target="_blank" rel="noopener noreferrer">National Portal of India ↗</a></li>
+            <li><a href="https://scholarships.gov.in/" target="_blank" rel="noopener noreferrer">National Scholarship Portal ↗</a></li>
+            <li><a href="https://pmkisan.gov.in/" target="_blank" rel="noopener noreferrer">PM-KISAN Portal ↗</a></li>
+            <li><a href="https://pmjay.gov.in/" target="_blank" rel="noopener noreferrer">PM-JAY Health Portal ↗</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Legal Disclaimer in Footer -->
+      <div class="footer-disclaimer-box">
+        <strong>Important Hackathon MVP Disclaimer:</strong> 
+        Government Scheme Finder is an educational prototype built for hackathon evaluation. 
+        It is not an official government agency or affiliated with any ministry. 
+        All trademarks, scheme titles, and department logos belong to their respective government bodies. 
+        Users must independently verify all scheme guidelines, terms, and deadlines on official portals before applying.
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 <strong>Team Scheme Savers</strong>. All Rights Reserved. Built with HTML5, CSS3 & Vanilla JavaScript.
+        </div>
+        <div>
+          First-Year B.Tech Hackathon Project MVP
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <!-- 1. Schemes Database & Demo Data -->
+  <script src="schemes.js"></script>
+  <!-- 2. Application Logic & User Interactions -->
+  <script src="script.js"></script>
+
+</body>
+</html>
