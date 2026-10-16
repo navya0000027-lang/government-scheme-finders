@@ -376,6 +376,11 @@ function processMatching(profile) {
 
   // Toast feedback
   showToast(`Found ${currentMatchingSchemes.length} possible matching scheme${currentMatchingSchemes.length === 1 ? '' : 's'} with checked rules!`);
+
+  // Telemetry: Log anonymous query to Supabase if connected (strictly non-blocking)
+  if (typeof logEligibilityQueryToSupabase === 'function') {
+    logEligibilityQueryToSupabase(profile, currentMatchingSchemes.length);
+  }
 }
 
 /**

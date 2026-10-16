@@ -644,9 +644,13 @@
   <div class="toast-container" id="toastContainer" aria-live="polite"></div>
 
   <!-- Scripts -->
-  <!-- 1. Schemes Database & Demo Data -->
+  <!-- 1. Supabase Client Library (Optional Cloud Database Layer) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- 2. Supabase API Connector Layer -->
+  <script src="supabaseClient.js"></script>
+  <!-- 3. Local Schemes Database & Demo Data (Primary & Offline Fallback) -->
   <script src="schemes.js"></script>
-  <!-- 2. Application Logic & User Interactions -->
+  <!-- 4. Application Logic & User Interactions -->
   <script src="script.js"></script>
 
 </body>
